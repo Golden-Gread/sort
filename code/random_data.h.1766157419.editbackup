@@ -1,0 +1,46 @@
+#ifndef RANDOM_H
+#define RANDOM_H
+
+
+#include<vector>
+#include<random>
+
+using namespace std;
+class Random{
+private:
+	int n;
+	vector<int> data={};
+public:
+	void set_number(int num){
+		n=num;
+		data={};
+	};
+	
+	
+	void runRandom(){
+		random_device rd;
+		mt19937 gen(rd());
+		uniform_int_distribution<> dis(1,1000);
+		
+		for(int i=0;i<=n;i++){
+			data.push_back(dis(gen));
+		}
+		
+		
+	};
+	vector<int> getRandomData(){
+		return data;
+	};
+};
+
+
+
+
+
+
+
+
+
+
+
+#endif
