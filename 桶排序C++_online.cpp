@@ -1,0 +1,58 @@
+#include<bits/stdc++.h>
+#include"./random_data.h"
+
+using namespace std;
+using namespace std::chrono;
+
+int main(){
+	Random r;
+	int x,y=100;
+	freopen("./out/tout.out","w",stdout);
+	
+	cout<<"input:";
+	cin>>x;
+	cout<<"选择排序：共"<<x<<"组，数据量："<<(1+x)*x*(y/2)<<endl;
+	x++;
+	cout<<fixed<<setprecision(3);
+	
+	for(int i=1;i<x;i++){
+
+		auto start = high_resolution_clock::now();
+		r.set_number(i*y);r.runRandom();
+		vector<int> data=r.getRandomData();
+		
+		
+		int num[1005]={0};
+		for(auto it=data.begin();it!=data.end();it++){
+			num[*it]++;
+		}
+		vector<int> data1={};
+		for(int i=0;i<=1000;i++){
+			for(int j=0;j<num[i];j++){
+				data1.push_back(i);
+			}
+		}
+		
+		
+		
+		
+		auto end = high_resolution_clock::now();
+		auto duration = end - start;
+		bool b1=true;
+		long long c=0;
+		for(int k=0;k<i*y-1;k++){
+			if(data1[k]>data1[k+1]){
+				b1=false;c++;
+			}
+		}
+		
+		
+		
+		cout<<"第"<<i<<"组 "<<"数据量："<<i*y<<" "<<((double)duration_cast<microseconds>(duration).count())/1000<<" ms";
+		if(b1) cout<<"  Data Accept.";
+		else cout<<"  Data Error.";
+		cout<<"       准确率："<<((i*y-c)/(double)(i*y))*100<<"%.";
+		cout<<endl;
+		
+	}
+}
