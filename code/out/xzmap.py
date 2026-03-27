@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# é€‰æ‹©æ’åºæ•°æ®
+# Ñ¡ÔñÅÅĞòÊı¾İ
 n = list(range(100, 10100, 100))
 t_ms = [1.872, 0.335, 0.569, 0.919, 1.685, 2.066, 2.779, 3.571, 5.61, 5.68,
         7.505, 8.153, 9.837, 11.849, 13.027, 15.201, 16.391, 18.577, 20.843, 23.032,
@@ -16,10 +16,10 @@ t_ms = [1.872, 0.335, 0.569, 0.919, 1.685, 2.066, 2.779, 3.571, 5.61, 5.68,
 
 plt.figure(figsize=(14, 8))
 
-# æ•£ç‚¹å›¾
+# É¢µãÍ¼
 plt.scatter(n, t_ms, alpha=0.7, color='green', s=30, label='Selection Sort')
 
-# O(nÂ²) è¶‹åŠ¿çº¿
+# O(n?) Ç÷ÊÆÏß
 n_array = np.array(n)
 coefficients = np.polyfit(n_array, t_ms, 2)
 trend_curve = np.poly1d(coefficients)
@@ -32,23 +32,23 @@ plt.ylabel('Running Time (ms)', fontsize=12)
 plt.grid(True, alpha=0.3)
 plt.legend()
 
-# æ·»åŠ æ€§èƒ½å…¬å¼
-formula = f't â‰ˆ {coefficients[0]:.2e}Â·nÂ² + {coefficients[1]:.2e}Â·n + {coefficients[2]:.2f}'
+# Ìí¼ÓĞÔÄÜ¹«Ê½
+formula = f't ¡Ö {coefficients[0]:.2e}¡¤n? + {coefficients[1]:.2e}¡¤n + {coefficients[2]:.2f}'
 plt.text(100, 500, formula, fontsize=11, bbox=dict(boxstyle="round,pad=0.3", facecolor="white"))
 
 plt.tight_layout()
 plt.show()
 
-# ç»Ÿè®¡åˆ†æ
+# Í³¼Æ·ÖÎö
 print("=== Statistical Analysis ===")
 print(f"Data range: n from {min(n)} to {max(n)}")
 print(f"Time range: {min(t_ms):.3f} ~ {max(t_ms):.3f} ms")
 
-# è®¡ç®—ç›¸å…³ç³»æ•°
+# ¼ÆËãÏà¹ØÏµÊı
 correlation_n2 = np.corrcoef([x**2 for x in n], t_ms)[0, 1]
 print(f"Correlation between n^2 and t: {correlation_n2:.6f}")
 
-# è®¡ç®—å¸¸æ•°å› å­
+# ¼ÆËã³£ÊıÒò×Ó
 k_values = [t / (n_val**2) for n_val, t in zip(n, t_ms)]
 avg_k = np.mean(k_values)
 std_k = np.std(k_values)

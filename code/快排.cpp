@@ -7,11 +7,11 @@ using namespace std::chrono;
 int main(){
 	Random r;
 	int x,y=100;
-	freopen("./out/xzout-O2.out","w",stdout);
+	//freopen("./out/xzout-O2.out","w",stdout);
 	
 	cout<<"input:";
 	cin>>x;
-	cout<<"选择排序：共"<<x<<"组，数据量："<<(1+x)*x*(y/2)<<endl;
+	cout<<"快速排序：共"<<x<<"组，数据量："<<(1+x)*x*(y/2)<<endl;
 	x++;
 	
 	for(int i=1;i<x;i++){
@@ -19,15 +19,9 @@ int main(){
 		
 		r.set_number(i*y);r.runRandom();
 		vector<int> data=r.getRandomData();
-		for(int k = 0; k < i * y - 1; k++){
-			int minIndex = k;
-			for(int j = k + 1; j < i * y; j++){
-				if(data[j] < data[minIndex]){
-					minIndex = j;
-				}
-			}
-			swap(data[k], data[minIndex]);
-		}
+		
+		sort(data.begin(),data.end());
+		
 		
 		
 		auto end = high_resolution_clock::now();
