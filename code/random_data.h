@@ -20,7 +20,7 @@ public:
 	void runRandom(){
 		random_device rd;
 		mt19937 gen(rd());
-		uniform_int_distribution<> dis(1,1000);
+		uniform_int_distribution<> dis(1,10000);
 		
 		for(int i=0;i<=n;i++){
 			data.push_back(dis(gen));
