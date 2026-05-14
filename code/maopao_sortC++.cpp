@@ -10,11 +10,15 @@ using namespace std::chrono;
 int main(){
 	Random r;
 	int x,y=100;
-	//freopen("./out/mpout-O2.out","w",stdout);
+	
+
+	fstream f;
+	f.open("./out/mpout-O2.out",ios::out);
 	
 	cout<<"input:";
 	cin>>x;
 	cout<<"冒泡排序：共"<<x<<"组，数据量："<<(1+x)*x*(y/2)<<endl;
+	f<<"冒泡排序：共"<<x<<"组，数据量："<<(1+x)*x*(y/2)<<endl;
 	x++;
 	
 	for(int i=1;i<x;i++){
@@ -36,6 +40,7 @@ int main(){
 		
 		auto end = high_resolution_clock::now();
 		auto duration = end - start;
+		
 		bool b1=true;
 		long long c=0;
 		for(int k=0;k<i*y;k++){
@@ -47,10 +52,13 @@ int main(){
 		
 		
 		cout<<"第"<<i<<"组 "<<"数据量："<<i*y<<" "<<((double)duration_cast<microseconds>(duration).count())/1000<<" ms";
-		if(b1) cout<<"  Data Accept.";
-		else cout<<"  Data Error.";
+		f<<"第"<<i<<"组 "<<"数据量："<<i*y<<" "<<((double)duration_cast<microseconds>(duration).count())/1000<<" ms";
+		if(b1) {cout<<"  Data Accept.";f<<"  Data Accept.";}
+		else {cout<<"  Data Error.";f<<"  Data Error.";}
 		cout<<"       准确率："<<((i*y-c)/(double)(i*y))*100<<"%.";
 		cout<<endl;
-		
+
+		f<<"       准确率："<<((i*y-c)/(double)(i*y))*100<<"%.";
+		f<<endl;
 	}
 }
