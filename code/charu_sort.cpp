@@ -9,7 +9,7 @@ int main(){
 	
 	cout<<"input:";
 	cin>>x;
-	cout<<"插入排序：共"<<x<<"组，数据量："<<(1+x)*x*(y/2)<<endl;
+	cout<<"Insertion Sort: A total of"<<x<<"groups, Data size:"<<(1+x)*x*(y/2)<<endl;
 	x++;
 	
 
@@ -56,10 +56,10 @@ int main(){
 		
 		
 		
-		cout<<"第"<<i<<"组 "<<"数据量："<<i*y<<" "<<((double)duration_cast<microseconds>(duration).count())/1000<<" ms";
+		cout<<i<<" group ,"<<"Data size:"<<i*y<<" "<<((double)duration_cast<microseconds>(duration).count())/1000<<" ms";
 		if(b1) cout<<"  Data Accept.";
 		else cout<<"  Data Error.";
-		cout<<"       准确率："<<((i*y-c)/(double)(i*y))*100<<"%.";
+		cout<<"       Accuracy:"<<((i*y-c)/(double)(i*y))*100<<"%.";
 		cout<<endl;
 		
 	}

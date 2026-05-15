@@ -17,8 +17,8 @@ int main(){
 	
 	cout<<"input:";
 	cin>>x;
-	cout<<"冒泡排序：共"<<x<<"组，数据量："<<(1+x)*x*(y/2)<<endl;
-	f<<"冒泡排序：共"<<x<<"组，数据量："<<(1+x)*x*(y/2)<<endl;
+	cout<<"Bubble Sort: A total of "<<x<<" groups, data size: "<<(1+x)*x*(y/2)<<endl;
+	f<<"Bubble Sort: A total of "<<x<<" groups, data size: "<<(1+x)*x*(y/2)<<endl;
 	x++;
 	
 auto now = std::chrono::system_clock::now();
@@ -60,14 +60,14 @@ auto now = std::chrono::system_clock::now();
 		
 		
 		
-		cout<<"第"<<i<<"组 "<<"数据量："<<i*y<<" "<<((double)duration_cast<microseconds>(duration).count())/1000<<" ms";
-		f<<"第"<<i<<"组 "<<"数据量："<<i*y<<" "<<((double)duration_cast<microseconds>(duration).count())/1000<<" ms";
+		cout<<i<<"group "<<"data size: "<<i*y<<" "<<((double)duration_cast<microseconds>(duration).count())/1000<<" ms";
+		f<<i<<"group "<<"data size: "<<i*y<<" "<<((double)duration_cast<microseconds>(duration).count())/1000<<" ms";
 		if(b1) {cout<<"  Data Accept.";f<<"  Data Accept.";}
 		else {cout<<"  Data Error.";f<<"  Data Error.";}
-		cout<<"       准确率："<<((i*y-c)/(double)(i*y))*100<<"%.";
+		cout<<"       accuracy: "<<((i*y-c)/(double)(i*y))*100<<"%.";
 		cout<<endl;
 
-		f<<"       准确率："<<((i*y-c)/(double)(i*y))*100<<"%.";
+		f<<"       accuracy:"<<((i*y-c)/(double)(i*y))*100<<"%.";
 		f<<endl;
 	}
 }

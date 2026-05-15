@@ -7,11 +7,11 @@ using namespace std::chrono;
 int main(){
 	Random r;
 	int x,y=100;
-	freopen("./out/xzout-O2.out","a",stdout);
+	freopen("./out/kp_sort.out","a",stdout);
 	
 	cout<<"input:";
 	cin>>x;
-	cout<<"快速排序：共"<<x<<"组，数据量："<<(1+x)*x*(y/2)<<endl;
+	cout<<"Quick Sort: A total of "<<x<<" groups, data volume: "<<(1+x)*x*(y/2)<<endl;
 	x++;
 	
 	auto now = std::chrono::system_clock::now();
@@ -46,10 +46,10 @@ int main(){
 		
 		
 		
-		cout<<"第"<<i<<"组 "<<"数据量："<<i*y<<" "<<((double)duration_cast<microseconds>(duration).count())/1000<<" ms";
+		cout<<i<<" group ,"<<"Data volume: "<<i*y<<" "<<((double)duration_cast<microseconds>(duration).count())/1000<<" ms";
 		if(b1) cout<<"  Data Accept.";
 		else cout<<"  Data Error.";
-		cout<<"       准确率："<<((i*y-c)/(double)(i*y))*100<<"%.";
+		cout<<"       Accuracy: "<<((i*y-c)/(double)(i*y))*100<<"%.";
 		cout<<endl;
 		
 	}
