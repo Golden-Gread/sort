@@ -7,13 +7,24 @@ using namespace std::chrono;
 int main(){
 	Random r;
 	int x,y=100;
-	freopen("./out/xzout_online_O2.out","w",stdout);
+	freopen("./out/xzout_online_O2.out","a",stdout);
 	
 	cout<<"input:";
 	cin>>x;
 	cout<<"选择排序：共"<<x<<"组，数据量："<<(1+x)*x*(y/2)<<endl;
 	x++;
 	
+
+	auto now = std::chrono::system_clock::now();
+    std::time_t now_time = std::chrono::system_clock::to_time_t(now);
+    
+    // 转换为本地时间
+    std::tm* local_time = std::localtime(&now_time);
+    
+    
+    std::cout << std::put_time(local_time, "%Y-%m-%d %H:%M:%S") << std::endl;
+
+
 	for(int i=1;i<x;i++){
 		auto start = high_resolution_clock::now();
 		

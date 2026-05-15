@@ -9,7 +9,7 @@ using namespace std::chrono;
 int main(){
 	Random r;
 	int x,y=100;
-	freopen("./out/tout.out","w",stdout);
+	freopen("./out/tout.out","a",stdout);
 	
 	cout<<"input:";
 	cin>>x;
