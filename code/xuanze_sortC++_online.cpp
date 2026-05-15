@@ -11,7 +11,7 @@ int main(){
 	
 	cout<<"input:";
 	cin>>x;
-	cout<<"选择排序：共"<<x<<"组，数据量："<<(1+x)*x*(y/2)<<endl;
+	for(int i=0;i<5;i++){cout<<"Selection Sort：A total of "<<x<<" groups, data volume: "<<(1+x)*x*(y/2)<<endl;
 	x++;
 	
 
@@ -53,11 +53,11 @@ int main(){
 		
 		
 		
-		cout<<"第"<<i<<"组 "<<"数据量："<<i*y<<" "<<((double)duration_cast<microseconds>(duration).count())/1000<<" ms";
+		cout<<i<<"group ,"<<"data volume: "<<i*y<<" "<<((double)duration_cast<microseconds>(duration).count())/1000<<" ms";
 		if(b1) cout<<"  Data Accept.";
 		else cout<<"  Data Error.";
-		cout<<"       准确率："<<((i*y-c)/(double)(i*y))*100<<"%.";
+		cout<<"       Accuracy: "<<((i*y-c)/(double)(i*y))*100<<"%.";
 		cout<<endl;
 		
-	}
+	}}
 }

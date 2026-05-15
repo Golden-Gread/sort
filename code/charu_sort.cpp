@@ -9,7 +9,7 @@ int main(){
 	
 	cout<<"input:";
 	cin>>x;
-	cout<<"Insertion Sort: A total of"<<x<<"groups, Data size:"<<(1+x)*x*(y/2)<<endl;
+	for(int i=0;i<5;i++){cout<<"Insertion Sort: A total of"<<x<<"groups, Data size:"<<(1+x)*x*(y/2)<<endl;
 	x++;
 	
 
@@ -62,5 +62,5 @@ int main(){
 		cout<<"       Accuracy:"<<((i*y-c)/(double)(i*y))*100<<"%.";
 		cout<<endl;
 		
-	}
+	}}
 }

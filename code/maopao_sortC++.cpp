@@ -17,7 +17,7 @@ int main(){
 	
 	cout<<"input:";
 	cin>>x;
-	cout<<"Bubble Sort: A total of "<<x<<" groups, data size: "<<(1+x)*x*(y/2)<<endl;
+	for(int i=0;i<5;i++){cout<<"Bubble Sort: A total of "<<x<<" groups, data size: "<<(1+x)*x*(y/2)<<endl;
 	f<<"Bubble Sort: A total of "<<x<<" groups, data size: "<<(1+x)*x*(y/2)<<endl;
 	x++;
 	
@@ -69,5 +69,5 @@ auto now = std::chrono::system_clock::now();
 
 		f<<"       accuracy:"<<((i*y-c)/(double)(i*y))*100<<"%.";
 		f<<endl;
-	}
+	}}
 }
