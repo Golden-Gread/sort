@@ -10,3 +10,5 @@ def get_random_num(start:int, end:int, count:int)->list:
 def get_time():
     return time.time()
 
+def swap(arr:list, i:int, j:int)->None:
+    arr[i], arr[j] = arr[j], arr[i]

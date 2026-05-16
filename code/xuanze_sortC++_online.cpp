@@ -11,7 +11,7 @@ int main(){
 	
 	cout<<"input:";
 	cin>>x;
-	for(int i=0;i<5;i++){cout<<"Selection Sort：A total of "<<x<<" groups, data volume: "<<(1+x)*x*(y/2)<<endl;
+	for(int i=0;i<5;i++){cout<<"Selection Sort: A total of "<<x<<" groups, data volume: "<<(1+x)*x*(y/2)<<endl;
 	x++;
 	
 
