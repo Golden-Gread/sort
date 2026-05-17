@@ -3,7 +3,7 @@ import random_num
 groups_num=int(input("input:"))
 
 for num in range(1,groups_num+1):
-    randlist=random_num.get_random_num(1,1000,100*num)
+    randlist=random_num.get_random_num(1,100000,100*num)
     start_time=random_num.get_time()
 
     for i in range(len(randlist)):
