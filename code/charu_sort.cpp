@@ -5,7 +5,7 @@ using namespace std::chrono;
 int main(){
 	Random r;
 	int x,y=100;
-	freopen("./out/crout.out","a",stdout);
+	freopen("./out/crout_O2.out","a",stdout);
 	
 	cout<<"input:";
 	cin>>x;

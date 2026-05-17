@@ -1,4 +1,4 @@
-#pragma GCC optimize("O2")
+//#pragma GCC optimize("O2")
 
 
 #include<bits/stdc++.h>
@@ -13,7 +13,7 @@ int main(){
 	
 
 	fstream f;
-	f.open("./out/mpout-O2.out",ios::app);
+	f.open("./out/mpout_O2.out",ios::app);
 	
 	cout<<"input:";
 	cin>>x;
