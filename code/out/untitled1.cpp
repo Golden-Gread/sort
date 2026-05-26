@@ -5,7 +5,7 @@ vector<string> sp(vector<string> data){
 	vector<string> l;
 	for(auto it:data){
 		int g_num,num_count;double t;
-		sscanf(it.c_str(),"%d group, Data volume: %d %lf ms  Data Accept.       Accuracy: 100.000%%.",&g_num,&num_count,&t);
+		sscanf(it.c_str(),"%d group ,Data volume: %d %lf ms  Data Accept.       Accuracy: 100%%.",&g_num,&num_count,&t);
 		l.push_back(to_string(t));
 	}
 	return l;
