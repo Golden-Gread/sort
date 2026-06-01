@@ -1,11 +1,13 @@
 import random_num
 import time
+
+strat_group_num=int(input("input:"))
 groups_num=int(input("input:"))
 
 print("Bubble Sort: A total of {} groups will be sorted.Data size:{}".format(groups_num,100*(groups_num+1)*groups_num/2))
 print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
-for num in range(1,groups_num+1):
+for num in range(strat_group_num,groups_num+1):
     randlist=random_num.get_random_num(1,100,100*num)
     
     list_len=len(randlist)
