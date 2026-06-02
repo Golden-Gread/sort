@@ -1,5 +1,9 @@
 import random
 import time
+from numba import jit
+import numpy as np
+
+@jit(nopython=True)
 
 def get_random_num(start:int, end:int, count:int)->list:
     ranum_list = []
